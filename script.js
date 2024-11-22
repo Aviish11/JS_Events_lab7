@@ -1,5 +1,6 @@
 const container = document.getElementById('container');
 const message = document.getElementById('message');
+const input = document.getElementById('nameInput');
 
 container.addEventListener('mouseover', (event) => {
     if (event.target.tagName === 'BUTTON') {
@@ -12,3 +13,7 @@ container.addEventListener('mouseout', (event) => {
         message.textContent = ('Stopped hovering over button: ' + event.target.textContent);
     }
 });
+
+input.addEventListener('keyup', (event) => {
+    message.textContent = ('Key released: ' + event.key);
+})
