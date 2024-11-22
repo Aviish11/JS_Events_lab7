@@ -2,6 +2,7 @@ const container = document.getElementById('container');
 const message = document.getElementById('message');
 const input = document.getElementById('nameInput');
 const form = document.getElementById('myForm');
+const message2 = document.getElementById('message2')
 
 container.addEventListener('mouseover', (event) => {
     if (event.target.tagName === 'BUTTON') {
@@ -32,4 +33,10 @@ input.addEventListener('focus' , (event) => {
 
 input.addEventListener('blur' , (event) => {
     message.textContent = ('Not focussing on Input Field')
+})
+
+container.addEventListener('click', (event) => {
+    if (event.target.tagName === 'BUTTON') {
+        message2.textContent = ('Button ' + event.target.textContent + ' has been pressed')
+    }
 })
