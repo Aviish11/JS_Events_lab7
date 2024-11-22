@@ -1,6 +1,7 @@
 const container = document.getElementById('container');
 const message = document.getElementById('message');
 const input = document.getElementById('nameInput');
+const form = document.getElementById('myForm');
 
 container.addEventListener('mouseover', (event) => {
     if (event.target.tagName === 'BUTTON') {
@@ -17,3 +18,9 @@ container.addEventListener('mouseout', (event) => {
 input.addEventListener('keyup', (event) => {
     message.textContent = ('Key released: ' + event.key);
 })
+
+form.addEventListener('submit', function(event) {
+    console.log('Form submitted');
+    event.preventDefault();
+    message.textContent = ('Form Submitted')
+});
