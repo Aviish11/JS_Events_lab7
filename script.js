@@ -24,3 +24,12 @@ form.addEventListener('submit', function(event) {
     event.preventDefault();
     message.textContent = ('Form Submitted')
 });
+
+
+input.addEventListener('focus' , (event) => {
+    message.textContent = ("Focussing on Input Field")
+})
+
+input.addEventListener('blur' , (event) => {
+    message.textContent = ('Not focussing on Input Field')
+})
